@@ -298,6 +298,14 @@ const Index = () => {
                                 {tx.facilityNames.join(', ')}
                               </span>
                             </div>
+                            {/* --- THIS IS THE NEW CODE --- */}
+                            <div className="flex gap-2">
+                              <span className="text-muted-foreground min-w-24">Tx Hash:</span>
+                              <span className="font-mono text-foreground truncate">
+                                {tx.txHash}
+                              </span>
+                            </div>
+                            {/* --- END OF NEW CODE --- */}
                           </div>
                         </div>
                       ))}

@@ -150,7 +150,7 @@ export class Web3Service {
     // Set expiration to 1 year from now
     const expiresAt = Math.floor(Date.now() / 1000) + (365 * 24 * 60 * 60);
 
-    const tx = await this.contract.batchGrantAccess(documentIds, facilityAddresses, expiresAt);
+    const tx = await this.contract.batchGrantAccess(documentIds, facilityAddresses);
     const receipt = await tx.wait();
 
     return receipt.transactionHash;
